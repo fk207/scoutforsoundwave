@@ -1,15 +1,16 @@
 # Compiler and Flags
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11 -O2
-LDFLAGS = 
+CFLAGS = -O2
+
+SRC_DIR = elevate/src/
 
 # Target executable name
-TARGET = elevate
+TARGET = $(SRC_DIR)elevate
 
 # Source files and Object files
-SRCS = elevate.c brute.c dp.c memoize.c recurse.c
+SRCS = $(SRC_DIR)elevate.c $(SRC_DIR)brute.c $(SRC_DIR)dp.c $(SRC_DIR)memoize.c $(SRC_DIR)recurse.c
 OBJS = $(SRCS:.c=.o)
-DEPS = elevate.h
+DEPS = $(SRC_DIR)elevate.h
 
 all: $(TARGET)
 
