@@ -1,5 +1,9 @@
 FROM alpine
 
-RUN apk add gcc make git linux-headers musl-dev
+RUN apk add gcc make git musl-dev
 
-RUN git clone https://github.com/fk207/hw1-fk207&& cd ./soundwave/src  && make CFLAGS='-Wno-error -Wno-implicit-function-declaration -Wno-int-conversion'
+WORKDIR /app
+
+RUN make CFLAGS='-Wno-error -Wno-implicit-function-declaration -Wno-int-conversion'
+
+CMD ["./elevate","input8.txt", "--mode=dp" ]
