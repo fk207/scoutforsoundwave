@@ -6,7 +6,7 @@ on:
         docker_image:
           description: 'The Docker image to scan'
           required: true
-          default: 'ghcr.io/fk207/scoutforsoundwave:latest'
+          default: 'ghcr.io/fk207/scoutforelevate:latest'
 
 jobs:
   scout:
